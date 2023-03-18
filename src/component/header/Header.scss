@@ -1,0 +1,406 @@
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media (max-height: 1008px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin minmobile {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+.header-container{
+    background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%), #D9D9D9;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 999;
+}
+.header {
+    background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%), #D9D9D9;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr .5fr .5fr 1.4fr 1fr;
+    min-height: 50px;
+    max-width: 1800px;
+    margin: 0 auto;
+    
+    transition: all .5s;
+    
+    color: white;
+
+    @media (max-width :1150px) and (min-width :1024px) {
+        grid-template-columns: 1fr 1fr 3fr .5fr .5fr 1.4fr .5fr;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    span,
+    h6 {
+        cursor: pointer;
+    }
+
+    >div {
+        // border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        // font-size: 1.5em;
+    }
+
+    button {
+        background: #407BF9;
+        border-radius: 27.5px;
+        width: 100%;
+        height: 50px;
+        padding: 10px 20px;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        // font-size: 1.3rem;
+    }
+
+
+    .location {
+        display: flex;
+        gap: 10px;
+
+        div {
+            h6 {
+                font-style: normal;
+                font-weight: 500;
+                // font-size: 1.2rem;
+                line-height: 21px;
+                color: #ffffff;
+            }
+
+            span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: .7rem;
+                line-height: 18px;
+                color: #ffffff;
+            }
+        }
+    }
+
+    .inputdiv {
+        position: relative;
+
+    }
+
+    input {
+        width: 100% !important;
+        height: 50px;
+        background: #F7F7F7;
+        border-radius: 100px;
+        border: 0;
+        outline: none;
+        font-size: 1em;
+        padding: 0 45px;
+
+        ~span {
+            position: absolute;
+            left: 10px;
+            cursor: pointer;
+        }
+
+    }
+
+    .accountMain {
+        display: flex;
+        gap: 20px;
+    }
+
+    .account {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        h6 {
+            font-style: normal;
+            font-weight: 500;
+            // font-size: 1.2rem;
+            line-height: 21px;
+            color: #ffffff;
+        }
+
+        span {
+            font-style: normal;
+            font-weight: 600;
+            font-size: .7rem;
+            line-height: 18px;
+            color: #ffffff;
+        }
+
+    }
+
+    .cartMain {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        @media (max-width :1150px) and (min-width :1024px) {
+            span:last-child {
+                display: none;
+
+            }
+        }
+
+    }
+
+
+}
+
+
+// Header2
+.header2-container{
+    background: #CF92FF;
+}
+.header2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    background: #CF92FF;
+    overflow: hidden;
+    color: white;
+    z-index: 99;
+    max-width: 1800px;
+    margin: 0 auto;
+
+    @media (max-width:1390px) and (min-width:1024px) {
+        >div:nth-last-child(2) {
+            display: none;
+        }
+    }
+
+
+    @include tablet {
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        justify-content: flex-start;
+        position: fixed;
+        width: 100vw;
+        height: calc(100vh - 180px);
+        overflow: auto;
+        right: -110%;
+        // display: non
+        transition: all 1s;
+
+        >div {
+            background: #c376ff;
+            width: 100%;
+            padding: 10px !important;
+            text-align: center;
+            border-radius: 12px;
+
+            &:last-child {
+                background-color: transparent;
+            }
+
+            &:last-child:active {
+                box-shadow: none !important;
+                ;
+            }
+
+            &:active {
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+
+
+    >div {
+        padding: 0 10px;
+        font-style: normal;
+        font-weight: 600;
+        // line-height: 38px;
+        cursor: pointer;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+        white-space: nowrap;
+    }
+
+    .downloadDiv {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        transition: all .5s;
+
+        @include mobile {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        span {
+            font-weight: 500;
+
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            @media (max-width :1150px) and (min-width :1024px) {
+
+                display: none;
+
+            }
+
+            @include mobile {
+                width: 100%;
+
+            }
+        }
+
+        button {
+            width: 105px;
+            height: 35px;
+            background: #407BF9;
+            border: 0;
+            color: white;
+            border-radius: 45px;
+            cursor: pointer;
+
+            @include mobile {
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+// Mobile header2 
+.header2Mob {
+    display: none;
+    z-index: 999;
+    @include tablet {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        background: #CF92FF;
+        position: sticky !important;
+        top: 70px;
+
+        h2 {
+            color: white;
+        }
+
+        .menu-icon {
+            height: 100%;
+            width: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            span {
+                background: #ffffff;
+                width: 100%;
+                height: 5px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+// Mobile header top
+
+.mob-header-top {
+    display: none;
+    z-index: 9999;
+    
+    @include tablet {
+        display: block;
+        position: sticky;
+        top: 0;
+        background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%), #D9D9D9;
+        padding: 10px;
+        border-bottom: 1px solid #CF92FF;
+        @include laptop{
+            // display: none;
+        }
+        >div {
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 100px;
+            border: 0;
+            outline: none;
+            font-size: 1em;
+            padding: 0 45px;
+
+            ~span {
+                position: absolute;
+                left: 10px;
+                top: 20%;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+// Mobile header bottom
+
+.mob-header-bottom {
+    display: none;
+    z-index: 990;
+
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+        height: 60px;
+
+        background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%), #D9D9D9;
+
+
+        div {
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+            font-weight: bolder;
+            padding: 15px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: #CF92FF;
+            }
+        }
+    }
+}

@@ -1,0 +1,372 @@
+@mixin tablet {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 480px) {
+        @content;
+    }
+}
+
+@mixin minmobile {
+    @media (max-width: 320px) {
+        @content;
+    }
+}
+
+
+.CreateAccount {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    background: #FFFFFF;
+
+    @include mobile {
+        padding: 5px;
+    }
+
+
+    button {
+        background: #AC4DF3;
+        border-radius: 27.5px;
+        width: 188.1px;
+        height: 55px;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .CreateAccount-container {
+        width: 400px;
+        background: #fbe6ff;
+        border-radius: 20px;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include mobile {
+            width: 100%;
+
+        }
+
+        h2 {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 35px;
+            color: #AC4DF3;
+            line-height: 98.8%;
+            padding-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0px 10px;
+            height: 40px;
+            outline: none;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 0;
+            // font-size: 15px;
+        }
+
+        p {
+            font-style: normal;
+            font-weight: 700;
+            // font-size: 15px;
+            line-height: 22px;
+            color: rgba(0, 0, 0, 0.5);
+
+
+        }
+
+        .create-btn {
+            width: 100%;
+            background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%);
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            border-radius: 8px;
+            height: 38px;
+            // padding: 12px 32px;
+            font-style: normal;
+            font-weight: 700;
+            // font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+            border: 0;
+            cursor: pointer;
+        }
+
+
+
+        .alreadyAccount {
+            font-style: normal;
+            font-weight: 400;
+            // font-size: 15px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+            color: #697475;
+
+            span {
+                color: #059CA6;
+                cursor: pointer;
+                // font-size: 15px;
+                font-weight: 400 !important;
+            }
+
+        }
+
+
+        .alert {
+            font-style: normal;
+            font-weight: 400;
+            // font-size: 15px;
+            line-height: 22px;
+            padding-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff7171;
+
+        }
+
+
+    }
+}
+
+
+.line {
+    height: 0px;
+    border-top: 1px solid #697475;
+    margin: 20px 0;
+}
+
+.privacyText {
+    font-style: normal;
+    font-weight: 400;
+    // font-size: 15px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: #697475;
+
+    span {
+        color: #059CA6;
+        cursor: pointer;
+        // font-size: 15px;
+    }
+}
+
+
+button:active {
+    box-shadow: 1px 1px 4px rgba(73, 73, 73, 0.233);
+}
+
+// Sign in
+.signin {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+
+    @include mobile {
+        padding: 5px;
+    }
+
+    span {
+        position: static;
+    }
+
+    button {
+        background: #AC4DF3;
+        border-radius: 27.5px;
+        width: 188.1px;
+        height: 55px;
+        color: white;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+
+    .create-btn {
+        width: 100%;
+        height: 38px;
+        background: linear-gradient(180deg, #AE4EF3 0%, #D465F4 100%), #AE4DF3;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 8px;
+        // padding: 12px 32px;
+        font-style: normal;
+        font-weight: 700;
+        // font-size: 16px;
+        line-height: 24px;
+        color: #ffffff;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .signin-container {
+        width: 400px;
+        background: #fbe6ff;
+        border-radius: 20px;
+        padding: 25px;
+        display: grid;
+        gap: 15px;
+
+        @include mobile {
+            width: 100%;
+
+        }
+
+        h2 {
+            font-style: normal;
+            font-weight: 400;
+            color: #AC4DF3;
+            line-height: 98.8%;
+            padding-bottom: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0px 10px;
+            height: 40px;
+            outline: none;
+            background: #ffffff;
+            border-radius: 8px;
+            border: 0;
+            // font-size: 15px;
+        }
+
+
+        .alreadyAccount {
+            font-style: normal;
+            font-weight: 400;
+            // font-size: 15px;
+            line-height: 23px;
+            letter-spacing: 0.02em;
+            color: #697475;
+
+
+        }
+
+
+
+        .alert {
+            font-style: normal;
+            font-weight: 400;
+            // font-size: 15px;
+            line-height: 22px;
+            padding-top: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ff7171;
+        }
+    }
+
+    .newToAmazon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+        position: relative;
+
+        .line {
+            height: 0px;
+            width: 100%;
+            border-top: 1px solid #697475;
+            margin: 20px 0;
+        }
+
+        div:nth-child(2) {
+            position: absolute;
+            // font-size: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            background-color: white;
+            padding: 0 5px;
+        }
+
+    }
+
+    .signin-createAccount {
+        padding: 0 20px;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+        }
+    }
+
+    p {
+        font-style: normal;
+        font-weight: 700;
+        // font-size: 15px;
+        line-height: 22px;
+        color: rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    span {
+        color: #059CA6;
+        cursor: pointer;
+        // font-size: 15px;
+    }
+
+    .signin-last {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .signin-last-in {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+}
+
+
+
+
+
+
+.password {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keepsignin label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+
+    p {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    input[type="checkbox"] {
+        width: 15px;
+    }
+}
