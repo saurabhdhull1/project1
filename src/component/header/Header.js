@@ -12,26 +12,26 @@ import {
   search,
   downarrow,
 } from "../Constant";
-import "./Header.scss";
+import Headercss from "./Header.module.css";
 import Header2 from "./Header2";
 
 export default class Header extends Component {
   render() {
     return (
       <>
-        <div className="header-container">
-          <div className="header">
+        <div className={Headercss.headerContainer}>
+          <div className={Headercss.header}>
             <Link to="/signin">
               <button>Login here</button>
             </Link>
-            <div className="location">
+            <div className={Headercss.location}>
               {location}
               <div>
                 <h6>Deliver to Rupin</h6>
                 <span>LUDHIAN A 141010</span>
               </div>
             </div>
-            <div className="inputdiv">
+            <div className={Headercss.inputdiv}>
               <input type="text" placeholder="Search products" />
               <span>{search}</span>
             </div>
@@ -40,27 +40,27 @@ export default class Header extends Component {
             </div>
             <div>
               <img src="/indiaflag.svg" alt="flag" />
-              <span>
+              <span className="flex items-center">
                 En <span>{downarrow}</span>
               </span>
             </div>
-            <div className="accountMain">
-              <div className="account">
+            <div className={Headercss.accountMain}>
+              <div className={Headercss.account}>
                 <h6>Hello Rupin,</h6>
-                <span>
+                <span className="flex items-center"> 
                   Accounts & Links <span>{downarrow}</span>
                 </span>
               </div>
-              <div className="account">
+              <div className={Headercss.account}>
                 <h6>Returns</h6>
                 <span>& Orders</span>
               </div>
             </div>
-            <div className="cartMain">
+            <div className={Headercss.cartMain}>
               <div>{heart}</div>
-              <div className="cart">
+              <div className="cart flex items-center gap-2">
                 <span>{cart}</span>
-                <span>
+                <span className="flex items-center gap-2">
                   Cart <span>{downarrow}</span>
                 </span>
               </div>
@@ -70,8 +70,8 @@ export default class Header extends Component {
 
         {/*mob-header-top*/}
 
-        <div className="mob-header-top">
-          <div className="inputdiv">
+        <div className={Headercss.mobHeaderTop}>
+          <div className={Headercss.inputdiv}>
             <div>
               <input type="text" placeholder="Search products" />
               <span>{search}</span>
@@ -81,12 +81,12 @@ export default class Header extends Component {
 
         {/*Header 2*/}
 
-        <div className="header2-container">
+        <div className="Headercss.header2-container">
           <Header2 />
         </div>
 
         {/*mob-header-bottom*/}
-        <div className="mob-header-bottom">
+        <div className={Headercss.mobHeaderBottom}>
           <div>
             <BiHomeAlt2 />
           </div>

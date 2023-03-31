@@ -8,7 +8,6 @@
   /* font-size: 62.5%; */
 }
 
-
 ::selection {
   background: #daa9ff;
   color: rgb(17, 17, 17);
@@ -44,10 +43,25 @@ button:active {
   background: #cf92ff;
 }
 
-/* @media (max-width:"1340px"){
-    ::-webkit-scrollbar {
-      width: 2px;
+/* @media (-moz-device-pixel-ratio: 1.5), (-webkit-device-pixel-ratio: 1.5) ,(-moz-device-pixel-ratio: 1.75), (-webkit-device-pixel-ratio: 1.75),,(-moz-device-pixel-ratio: 1.75), (-webkit-device-pixel-ratio: 1.75) { */
+/* @media screen and (min-resolution: 120dpi)  {
+  body {
+    min-width: 1366px;
 
-      background-color: black;
-    }
-  } */
+  }
+} */
+/* Media query for mobile phones */
+@media only screen and (max-width: 821px) and (min-resolution: 120dpi) and (min-zoom: 1) {
+  /* Custom CSS styles for mobile phones */
+  body {
+    min-width: 366px;
+  }
+}
+
+/* Media query for laptops and desktops */
+@media only screen and (min-width: 821px) and (min-resolution: 120dpi) {
+  /* Custom CSS styles for laptops and desktops */
+  body {
+    min-width: 1366px;
+  }
+}

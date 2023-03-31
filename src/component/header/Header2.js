@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Header.scss";
+import Headercss from "./Header.module.css";
 import { BsList } from "react-icons/bs";
 import { downarrow } from "../Constant";
 // import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ export default class Header2 extends Component {
 
   render() {
     const togglebtn = () => {
-      const heading2 = document.querySelector(".header2");
+      const heading2 = document.querySelector("#toggle");
       if (this.state.On) {
         // heading2.style.display = "flex";
         heading2.style.right = "0";
@@ -27,18 +27,18 @@ export default class Header2 extends Component {
     };
     return (
       <>
-        <div className="header2Mob">
+        <div className={Headercss.header2Mob}>
           <div>
             <h2>Amazon</h2>
           </div>
-          <div className="menu-icon" onClick={togglebtn}>
+          <div className={Headercss.menuIcon} onClick={togglebtn}>
             <span></span>
             <span></span>
             <span></span>
           </div>
         </div>
-        <div className="header2">
-          <div onClick={togglebtn}>
+        <div className={Headercss.header2} id="toggle">
+          <div onClick={togglebtn} className="flex items-center gap-2">
             <span>
               <BsList />
             </span>
@@ -50,12 +50,12 @@ export default class Header2 extends Component {
           <div onClick={togglebtn}>Buy Again</div>
           <div onClick={togglebtn}>App Pay</div>
           <div onClick={togglebtn}>Baby</div>
-          <div onClick={togglebtn}>
+          <div onClick={togglebtn} className="flex items-center gap-2">
             Browsing History <span>{downarrow}</span>
           </div>
           <div onClick={togglebtn}>Special Items</div>
           <div onClick={togglebtn}>Rupin's Amazon.in</div>
-          <div className="downloadDiv">
+          <div className={Headercss.downloadDiv}>
             <button>Download</button>
             <div>
               <span>Shopping made it easy</span>

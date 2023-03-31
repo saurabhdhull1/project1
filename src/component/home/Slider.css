@@ -1,65 +1,35 @@
-.slick-slide img {
-  display: block;
-  width: 100%;
-  height: auto;
-  /* border-radius: 12px; */
+.css {
+  padding: 20px 30px;
 }
-.slick-slide > div {
-  /* border-radius: 15px; */
-  /* overflow: hidden; */
-  /* padding:0 10px; */
-}
-/* .slick-slide > div > div *{
-  background-color: red;
-} */
-.slick-prev,
-.slick-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 1;
-  font-size: 1.5rem;
+
+/* swiper */
+
+.swiper-button-prev,
+.swiper-button-next {
   color: rgb(0, 0, 0) !important;
   background-color: rgba(255, 255, 255, 0.829) !important;
   border: none !important;
   border-radius: 50% !important;
-  width: 3rem !important;
-  height: 3rem !important;
   cursor: pointer !important;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out !important;
+  height: 50px !important;
+  width: 50px !important;
 }
-/* .slick-next *{
-  background-color: black;
-  color: black;
-} */
+.swiper-button-prev:hover,
+.swiper-button-next:hover{
+  box-shadow: 2px 2px 5px rgb(99, 99, 99);
+} 
 
-.slick-prev::before,
-.slick-next::before {
-  color: rgb(0, 0, 0) !important;
+.swiper-button-prev {
+  left: 10px !important;
 }
-.slick-prev:hover,
-.slick-next:hover {
-  color: rgb(0, 0, 0) !important;
-  background-color: rgb(255, 255, 255) !important;
-  box-shadow: 2px 2px 10px rgb(146, 146, 146);
+.swiper-button-next {
+  right: 10px !important;
 }
 
-.slick-prev {
-  left: 18px !important;
+.swiper-button-prev::after {
+  content: url("/public/asset/prev.svg") !important;
 }
-
-.slick-next {
-  right: 18px !important; 
-}
-.css{
-  padding: 20px 30px;
-
-}
-.css > div {
-  /* border-radius: 12px !important; */
-  /* overflow: hidden !important; */
-}
-.css > div > img{
-  /* border-radius: 12px !important; */
-  /* overflow: hidden !important; */
+.swiper-button-next::after {
+  content: url("/public/asset/next.svg") !important;
 }

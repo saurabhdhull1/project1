@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Alert } from "../Constant";
-import "./Login.scss";
+// import "./Login.scss";
 
 export default function CreateAccount() {
   const navigate = useNavigate();
@@ -128,7 +128,7 @@ export class CreateAccountmini extends Component {
   validateConfirmPassword = () => {
     const { password, confirmPassword } = this.state;
     if (!confirmPassword) {
-      return "Confirm Password is required";
+      return "Confirm your Password";
     }
     if (password !== confirmPassword) {
       return "Passwords do not match";
@@ -150,24 +150,25 @@ export class CreateAccountmini extends Component {
       confirmPasswordError,
     } = this.state;
     return (
-      <div className="CreateAccount">
+      <div className="min-h-screen flex flex-col items-center justify-center gap-8 p-2 sm:p-12 bg-white">
         <Link to="/signin">
-          <button>Login here</button>
+          <button className="bg-[#AC4DF3] rounded-[27px] px-10 py-4 text-white">Login here</button>
         </Link>
         <form action="">
-          <div className="CreateAccount-container">
-            <h2>Create account</h2>
+          <div className="sm:w-96 bg-purple-100 rounded-lg p-6 flex flex-col gap-4 w-full">
+            <h2 className="text-3xl font-medium text-purple-600 pb-4">Create account</h2>
             <div>
-              <p>Your name</p>
+              <p className="font-bold text-gray-500">Your name</p>
               <input
                 type="text"
                 // placeholder="First and last name"
                 name="name"
                 value={name}
                 onChange={this.hangleChange}
+                className="w-full px-3 py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-purple-600 focus:border-transparent"
               />
               {nameError ? (
-                <div className="alert">
+                <div className="gap-2 text-red-700 px-3 py-1 rounded-md flex items-center justify-start">
                   {Alert}
                   {nameError}
                 </div>
@@ -176,16 +177,17 @@ export class CreateAccountmini extends Component {
               )}
             </div>
             <div>
-              <p>Email</p>
+              <p className="font-bold text-gray-500">Email</p>
               <input
                 type="text"
                 // placeholder="Your email"
                 name="email"
                 value={email}
                 onChange={this.hangleChange}
+                className="w-full px-3 py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-purple-600 focus:border-transparent"
               />
               {emailError ? (
-                <div className="alert">
+                <div className="gap-2 text-red-700 px-3 py-1 rounded-md flex items-center justify-start">
                   {Alert}
                   {emailError}
                 </div>
@@ -194,15 +196,16 @@ export class CreateAccountmini extends Component {
               )}
             </div>
             <div>
-              <p>Phone number</p>
+              <p className="font-bold text-gray-500">Phone number</p>
               <input
                 type="text"
                 name="phone"
                 value={phone}
                 onChange={this.hangleChange}
+                className="w-full px-3 py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-purple-600 focus:border-transparent"
               />
               {phoneError ? (
-                <div className="alert">
+                <div className="gap-2 text-red-700 px-3 py-1 rounded-md flex items-center justify-start">
                   {Alert}
                   {phoneError}
                 </div>
@@ -211,16 +214,17 @@ export class CreateAccountmini extends Component {
               )}
             </div>
             <div>
-              <p>Password</p>
+              <p className="font-bold text-gray-500">Password</p>
               <input
                 type="password"
                 // placeholder="Password"
                 name="password"
                 value={password}
                 onChange={this.hangleChange}
+                className="w-full px-3 py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-purple-600 focus:border-transparent"
               />
               {passwordError ? (
-                <div className="alert">
+                <div className="gap-2 text-red-700 px-3 py-1 rounded-md flex items-center justify-start">
                   {Alert}
                   {passwordError}
                 </div>
@@ -229,16 +233,17 @@ export class CreateAccountmini extends Component {
               )}
             </div>
             <div>
-              <p>Password again</p>
+              <p className="font-bold text-gray-500">Password again</p>
               <input
                 type="password"
                 // placeholder="Confirm Password"
                 name="confirmPassword"
                 value={confirmPassword}
                 onChange={this.hangleChange}
+                className="w-full px-3 py-2 rounded-md border-gray-300 focus:outline-none focus:ring focus:ring-purple-600 focus:border-transparent"
               />
               {confirmPasswordError ? (
-                <div className="alert">
+                <div className="gap-2 text-red-700 px-3 py-1 rounded-md flex items-center justify-start">
                   {Alert}
                   {confirmPasswordError}
                 </div>
@@ -246,18 +251,18 @@ export class CreateAccountmini extends Component {
                 <div></div>
               )}
             </div>
-            <button onClick={this.handleSubmit} className="create-btn">
+            <button onClick={this.handleSubmit} className="create-btn bg-gradient-to-b from-[#AC4DF3] to-[#D465F4] hover:to-[#AC4DF3] hover:from-[#D465F4] shadow-md rounded-lg h-10 font-bold text-base text-white border-none outline-none cursor-pointer w-full">
               Create your Amazon account
             </button>
-            <p className="privacyText">
+            <p className="font-bold text-base leading-6 tracking-tight text-gray-500">
               By creating an account or logging in, you agree to Amazon's
-              <span> Conditions of Use</span> and <span>Privacy Policy</span>.
+              <span className="text-blue-500 cursor-pointer"> Conditions of Use</span> and <span className="text-blue-500 cursor-pointer">Privacy Policy</span>.
             </p>
-            <div className="line"></div>
-            <p className="alreadyAccount">
+            <div className="border-t-2 border-[#697475] my-3"></div>
+            <p className="font-bold text-base leading-6 tracking-tight text-gray-500">
               Already have an account?{" "}
               <Link to="/signin" style={{ textDecoration: "none" }}>
-                <span>Sign in</span>
+                <span className="text-blue-500 cursor-pointer">Sign in</span>
               </Link>
             </p>
           </div>

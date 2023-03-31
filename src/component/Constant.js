@@ -23,7 +23,6 @@ const Alert = (
     />
   </svg>
 );
-
 const location = (
   <svg
     width="25"
@@ -93,8 +92,8 @@ const heart = (
     <path
       d="M18.4567 1.99415C15.7751 0.349229 13.4345 1.01211 12.0285 2.06801C11.452 2.50096 11.1637 2.71743 10.9941 2.71743C10.8245 2.71743 10.5363 2.50096 9.95979 2.06801C8.55376 1.01211 6.21323 0.349229 3.53158 1.99415C0.0122092 4.15294 -0.784139 11.2749 7.33367 17.2834C8.87986 18.4278 9.65295 19 10.9941 19C12.3353 19 13.1084 18.4278 14.6546 17.2834C22.7724 11.2749 21.9761 4.15294 18.4567 1.99415Z"
       stroke="white"
-      stroke-width="1.5"
-      stroke-linecap="round"
+      strokeWidth="1.5"
+      strokeLinecap="round"
     />
   </svg>
 );
@@ -181,6 +180,84 @@ const leftArrow = (
     />
   </svg>
 );
+const prevbtn = (
+  <svg
+    width="19"
+    height="33"
+    viewBox="0 0 19 33"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.696458 18.1694C0.250518 17.7266 1.03449e-06 17.1261 1.0664e-06 16.5C1.09831e-06 15.8739 0.250518 15.2734 0.696458 14.8306L14.9688 0.662841C15.4174 0.232714 16.0183 -0.00529085 16.642 8.91745e-05C17.2656 0.0054692 17.8623 0.253803 18.3033 0.691605C18.7443 1.12941 18.9945 1.72165 18.9999 2.34077C19.0053 2.95989 18.7656 3.55636 18.3323 4.0017L5.74172 16.5L18.3323 28.9983C18.7656 29.4436 19.0053 30.0401 18.9999 30.6592C18.9945 31.2784 18.7443 31.8706 18.3033 32.3084C17.8623 32.7462 17.2656 32.9945 16.642 32.9999C16.0183 33.0053 15.4174 32.7673 14.9688 32.3372L0.696458 18.1694Z"
+      fill="#697475"
+    />
+  </svg>
+);
+const nextbtn = (
+  <svg
+    width="19"
+    height="33"
+    viewBox="0 0 19 33"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M18.3035 14.8306C18.7495 15.2734 19 15.8739 19 16.5C19 17.1261 18.7495 17.7266 18.3035 18.1694L4.03124 32.3372C3.58261 32.7673 2.98174 33.0053 2.35805 32.9999C1.73436 32.9945 1.13774 32.7462 0.69671 32.3084C0.255677 31.8706 0.00550987 31.2784 9.02456e-05 30.6592C-0.00532938 30.0401 0.234432 29.4436 0.667735 28.9983L13.2583 16.5L0.667738 4.0017C0.234436 3.55636 -0.00532564 2.95989 9.41646e-05 2.34077C0.00551396 1.72165 0.255681 1.12941 0.696715 0.691605C1.13775 0.253803 1.73436 0.00547049 2.35805 8.80326e-05C2.98174 -0.00529061 3.58261 0.232712 4.03124 0.662842L18.3035 14.8306Z"
+      fill="#697475"
+    />
+  </svg>
+);
+const cartbtn = (
+  <svg
+    width="53"
+    height="53"
+    viewBox="0 0 53 53"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g filter="url(#filter0_d_341_7490)">
+      <circle cx="26.5" cy="22.5" r="22.5" fill="#FFD814" />
+    </g>
+    <defs>
+      <filter
+        id="filter0_d_341_7490"
+        x="0"
+        y="0"
+        width="53"
+        height="53"
+        filterUnits="userSpaceOnUse"
+        colorInterpolationFilters="sRGB"
+      >
+        <feFlood floodOpacity="0" result="BackgroundImageFix" />
+        <feColorMatrix
+          in="SourceAlpha"
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+          result="hardAlpha"
+        />
+        <feOffset dy="4" />
+        <feGaussianBlur stdDeviation="2" />
+        <feComposite in2="hardAlpha" operator="out" />
+        <feColorMatrix
+          type="matrix"
+          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+        />
+        <feBlend
+          mode="normal"
+          in2="BackgroundImageFix"
+          result="effect1_dropShadow_341_7490"
+        />
+        <feBlend
+          mode="normal"
+          in="SourceGraphic"
+          in2="effect1_dropShadow_341_7490"
+          result="shape"
+        />
+      </filter>
+    </defs>
+  </svg>
+);
 
 export {
   Alert,
@@ -188,7 +265,10 @@ export {
   filtercircle,
   heart,
   cart,
+  cartbtn,
   search,
   downarrow,
   leftArrow,
+  prevbtn,
+  nextbtn,
 };

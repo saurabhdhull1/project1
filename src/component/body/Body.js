@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Footer from "../footer/Footer";
 import Header from "../header/Header";
 import Home from "../home/Home";
 // import Order from "../order/Order";
@@ -10,9 +11,7 @@ export default class Body extends Component {
       <>
         <Header />
         <Home/>
-        <h1 style={{ height: "80vh", display: "grid", placeItems: "center" }}>
-          Body
-        </h1>
+        <Footer/>
       </>
     );
   }
